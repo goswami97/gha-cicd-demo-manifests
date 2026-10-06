@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gha-cicd-demo
+  namespace: production
+  labels:
+    app: gha-cicd-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gha-cicd-demo
+  template:
+    metadata:
+      labels:
+        app: gha-cicd-demo
+    spec:
+      containers:
+        - name: gha-cicd-demo
+          image: ghcr.io/goswami97/gha-cicd-demo:f96b5034145ee52460541382777df0501549558f
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
