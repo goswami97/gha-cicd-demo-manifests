@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: gha-cicd-demo
-          image: ghcr.io/goswami97/gha-cicd-demo:a5c4a7e794932719d97b4c7a568b5b68f08f5d5f
+          image: ghcr.io/goswami97/gha-cicd-demo:033e3e7f322f9b89fcf580ada102628e05b85c6e
           ports:
             - containerPort: 80
           resources:
