@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gha-cicd-demo
-  namespace: default
+  namespace: development
   labels:
     app: gha-cicd-demo
 spec:
